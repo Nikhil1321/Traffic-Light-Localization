@@ -1,0 +1,18 @@
+<launch>
+
+    <node
+    name="traffic_light_position3d"
+    pkg="traffic_light_localization"
+    type="traffic_light_localization.py" 
+    output="screen"
+    />
+
+    <node
+    pkg="rosbag"
+    type="play"
+    name="player"
+    output="log"
+    args="--clock /home/nikhil/Desktop/bags/scenario_traffic-lights_2.bag"
+    />
+
+</launch>
